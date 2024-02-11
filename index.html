@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="car.js"></script>
+    <title>PROJECT - CUSTOM CAR DESIGN</title>
+</head>
+<body>
+    <a-scene>
+        <a-camera position="0 8 15"></a-camera>
+
+        <a-assets>
+            <a-asset-item id="car" src="/assets/scene.gltf"></a-asset-item>
+            <img id="bg" src="/assets/bg.jpg">
+        </a-assets>
+        <a-sky src="#bg"></a-sky>
+        <a-entity car>
+            <a-entity position="4 7 15" scale="9 9 9" rotation="360 250 360" gltf-model="#car"></a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
